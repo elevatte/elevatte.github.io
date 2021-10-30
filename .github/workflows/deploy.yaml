@@ -28,6 +28,8 @@ jobs:
           npm i
           NODE_ENV=production npm run build
           cat CNAME > ./dist/CNAME
+          cat robots.txt > ./dist/robots.txt
+          cat sitemap.xml > ./dist/sitemap.xml
           cd dist
           git init
           git add -A
