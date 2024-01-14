@@ -27,7 +27,6 @@ jobs:
         run: |
           npm i
           NODE_ENV=production npm run build
-          cat CNAME > ./dist/CNAME
           cd dist
           git init
           git add -A
