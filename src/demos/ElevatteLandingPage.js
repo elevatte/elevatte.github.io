@@ -7,7 +7,7 @@ import Features from "components/features/ThreeColSimple.js";
 import MainFeature from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
 import FeatureStats from "components/features/ThreeColCenteredStatsPrimaryBackground.js";
 import Blog from "components/blogs/GridWithFeaturedPost.js";
-import Testimonial from "components/testimonials/TwoColumnWithImage.js";
+import Testimonial from "components/testimonials/SimplePrimaryBackground.js";
 import FAQ from "components/faqs/SingleCol.js";
 import DownloadApp from "components/cta/DownloadApp.js";
 import Footer from "components/footers/SimpleFiveColumn.js";
@@ -37,14 +37,14 @@ const HighlightedTextInverse = tw.span`bg-gray-100 text-blue-700 px-4 transform 
 
 export default () => {
   return (
-    <AnimationRevealPage>
+    <AnimationRevealPage disabled>
       <div id="home">
         <Hero
           heading='Eleve seu valor e conquiste seu aumento salarial'
           description='Seja destaque nos processos seletivos com nossas ferramentas avançadas para criar currículo e preparação para entrevistas. Crie sua conta e comece agora mesmo!'
           subHeading='Assistente de IA para crescimento profissional'
           imageSrc={heroImage}
-          primaryButtonUrl = "#"
+          primaryButtonUrl = "https://forms.gle/Tk3Lf5jHX5xxpYZJ7"
           primaryButtonText = "Começar"
         />
       </div>
@@ -54,10 +54,10 @@ export default () => {
           <MainFeature
             subheading=''
             imageSrc={imageFirstFeature}
-            heading={<>Tenha velocidade na criação do seu CV</>}
-            description='Não se preocupe com os errors básicos e como escrever as suas informações no currículo, nós fazemos isso para você! Melhoramos a escrita do seu currículo utilizando o nosso a nossa IA com conhecimento abrangente sobre processo seletivos e construção de CV atrativos.'
+            heading={<>Crie seu CV com Rapidez e Precisão</>}
+            description='Diga adeus aos erros básicos e à dificuldade de escrever seu currículo. Nossa IA especializada faz todo o trabalho pesado para você, garantindo uma escrita impecável e um CV atrativo, perfeito para qualquer processo seletivo.'
             features={[]}
-            primaryButtonText='Saiba mais'
+            onButton={false}
           />
         </BackgroundRightContainer>
         <BackgroundWaveContainer style={{ backgroundImage: `url(${bgWave})`, backgroundRepeat: 'no-repeat' }}>
@@ -65,20 +65,20 @@ export default () => {
             textOnLeft={false}
             subheading=''
             imageSrc={imageSecondFeature}
-            heading={<>Seu currículo ganha destaque nas vagas</>}
-            description='Seja um dos primeros nos processos seletivos utilizando o currículo da elevatte, que combina um design atraente e totalmente otimizado para sistemas de recrutramento. Nossa plataforma ajuda a realçar suas habilidades, experiências, conquistas e na correção de errors básicos, tornando você mais visível e atraente para recrutadores.'
+            heading={<>Destacar-se Nunca foi Tão Fácil</>}
+            description='Seja um dos primeiros a ser notado nos processos seletivos com nosso CV otimizado e de design atraente. Nossa plataforma destaca suas habilidades, experiências e conquistas, corrigindo qualquer erro e tornando você irresistível aos olhos dos recrutadores.'
             features={[]}
-            primaryButtonText='Saiba mais'
+            onButton={false}
           />
         </BackgroundWaveContainer>
         <BackgroundRightContainer style={{ backgroundImage: `url(${bgRight})`, backgroundRepeat: 'no-repeat' }}>
           <MainFeature
             subheading=''
             imageSrc={imageThirdFeature}
-            heading={<>Auto tradução do seu CV para outros idiomas</>}
-            description='Não se preocupe com os errors básicos e como escrever as suas informações no currículo, nós fazemos isso para você! Melhoramos a escrita do seu currículo utilizando o nosso a nossa IA com conhecimento abrangente sobre processo seletivos e construção de CV atrativos.'
+            heading={<>Traduza seu CV para Vários Idiomas sem Esforço</>}
+            description='Elimine a barreira do idioma com nossa funcionalidade de tradução automática. Nossa IA não só traduz, mas também ajusta seu currículo para que ele seja atrativo em qualquer língua, sem erros e com uma escrita impecável.'
             features={[]}
-            primaryButtonText='Saiba mais'
+            onButton={false}
           />
         </BackgroundRightContainer>
         <Features
@@ -89,37 +89,37 @@ export default () => {
               imageSrc: outplacementImage,
               title: "Outplacement",
               description: "Facilitamos a transição de carreira com análise de perfil, currículos impactantes, preparo para entrevistas e acesso a uma rede de contatos. Recolocação rápida e personalizada.",
-              url: "#"
+              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Outplacement"
             },
             {
               imageSrc: headHunterImage,
               title: "Headhunter",
               description: "Recrutamos talentos de alto nível para posições-chave, com total discrição. Apresentamos profissionais qualificados que impulsionam o crescimento da sua organização.",
-              url: "#"
+              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Headhunter"
             },
             {
               imageSrc: mentoriaDeCarreiraImage,
               title: "Mentoria de Carreira",
               description: "Desenvolva sua carreira com diagnóstico, plano estratégico e mentoria contínua. Avance e alcance seus objetivos com nosso suporte.",
-              url: "#"
+              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Mentoria%20de%20Carreira"
             },
             {
               imageSrc: treinamentosEPalestrasImage,
               title: "Treinamentos e Palestras",
               description: "Capacitamos sua equipe em gestão, desenvolvimento e inovação. Workshops práticos para enfrentar desafios e alcançar resultados excepcionais.",
-              url: "#"
+              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Treinamentos%20e%20Palestras"
             },
             {
               imageSrc: aperfeicoamentoImage,
               title: "Aperfeiçoamento Personalizado",
               description: "Receba feedback detalhado e recomendações baseadas nas tendências de mercado para aprimorar suas habilidades e se destacar profissionalmente.",
-              url: "#"
+              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Aperfeiçoamento%20Personalizado"
             },
             {
               imageSrc: apresentacaoPessoalImage,
               title: "Otimização da Apresentação Pessoal",
               description: "Aprimore sua apresentação pessoal com orientações claras e práticas, destacando suas competências e conquistas de forma impactante.",
-              url: "#"
+              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Otimiza%C3%A7%C3%A3o%20da%20Apresenta%C3%A7%C3%A3o%20Pessoal"
             }
           ]}
           imageContainerCss={tw`p-2!`}
@@ -133,30 +133,30 @@ export default () => {
           {
             imageSrc: testimonial1,
             quote:
-              "Na época eu ainda estava dando meus primeiros passos na programação e além de estar meio perdido com a programação em si, também estava meio perdido com a carreira. Mas, diferentemente da programação que tem vários tutoriais e cursos, não encontrava ninguem que falasse direto ao ponto como eu deveria me fazer para me colocar no mercado, até encontrar o Jorge. O Jorge, com o growth de carreira, em poucas reuniões me fez entender muito sobre como me posicionar, como me planejar, como me vender. E não apenas isso, ele me mostrou como eu deveria utilizar as ferramentas disponíveis a meu favor tais como linkedin, curriculo, networking. Algumas semanas após o Growth, já recebi algumas propostas de emprego. E nessa hora, o Jorge também me ajudou a identificar quais propostas fariam mais sentido ao longo prazo. No geral, foi uma experiência muito importante e com certeza fez toda a diferença para eu conseguir finalmente ingressar no mercado de trabalho",
+              "Comecei na programação perdido tanto na área quanto na carreira. Não encontrava orientação clara até conhecer a Elevatte. Em poucas reuniões, eles me ensinaram a me posicionar, planejar e usar ferramentas como LinkedIn e networking. Recebi propostas de emprego rapidamente e eles me ajudaram a escolher as melhores. Foi uma experiência crucial para minha entrada no mercado.",
             customerName: "Thiago Barbosa",
-            customerTitle: "Software Engineer – Softensity Inc – USA"
+            customerProfile: "Software Engineer – Softensity Inc – USA"
           },
           {
             imageSrc: testimonial2,
             quote:
-              "Depois de dez anos sem mexer no meu CV, precisei atualizá-lo para encontrar uma nova oportunidade. Na minha cabeça era apenas preencher o LinkedIn com as minhas últimas experiências para posteriormente entrar em contato com algumas empresa, enviando o clássico email com o CV em anexo. Inocência minha. Hoje em dia conquistar uma nova colocação é um trabalho de Growth e SEO que exige um método pragmático e eficaz e pode ser a diferença entre entrar na empresa dos seus sonhos ou em uma ruim. O Jorge Mallet e a Elevatte me ajudaram nesse processo. Eles desenvolveram um método próprio para conduzir esse trabalho e não mediram esforços para entregar o resultado. Muito obrigado Elevatte e especialmente ao Jorge, só tenho a agradecer a vocês.",
+              "Após dez anos sem atualizar meu CV, precisei de uma nova oportunidade. Pensava que era só atualizar o LinkedIn e enviar e-mails com o CV em anexo, mas hoje isso exige uma estratégia de Growth e SEO. A Elevatte me ajudou com um método eficaz, resultando em sucesso. Agradeço muito a eles.",
             customerName: "Cesar Barone",
-            customerTitle: "Software Engineer Manager – Nutrisense – USA"
+            customerProfile: "Software Engineer Manager – Nutrisense – USA"
           },
           {
             imageSrc: testimonial3,
             quote:
-              "O Growth de Carreira aplicado por Jorge Mallet é rápido e o melhor: provoca uma mudança profunda motivacional para a vida toda. Com apenas uma sessão eu pude rever diversos conceitos que me ajudaram a mudar o rumo da minha carreira. Funciona pois o objetivo é destacar o potencial que já existe dentro de você, mas que por diversos motivos você deixa de perceber. Eu saí de uma posição de especialista para gerência sênior, e o melhor, podendo escolher qual empresa eu queria atuar. E isso só foi possível pois com a técnica aplicada pelo Jorge Mallet eu pude entender qual era o meu verdadeiro lugar e qual era meu potencial, valores e diferenciais.",
+              "O Growth de Carreira com a Elevatte é rápido e transformador. Em uma sessão, revi conceitos que mudaram minha carreira. Entendi meu potencial e passei de especialista a gerente sênior, podendo escolher a empresa onde queria trabalhar. Eles me ajudaram a reconhecer meu valor e diferencial.",
             customerName: "Daniella Borges",
-            customerTitle: "Professora ESPM – Sócia na Agência Onda Live Marketing"
+            customerProfile: "Professora ESPM – Sócia na Agência Onda Live Marketing"
           },
           {
             imageSrc: testimonial4,
             quote:
-              "Estou em um momento de transição de carreira, em que decidi mudar meu ramo de atuação. Em alguns momentos, sentia que faltava algo a mais para poder ser mais efetivo neste processo. Há algumas semanas, iniciei o meu projeto de growth de carreira com Jorge Mallet, e a cada reunião tem sido uma descoberta incrível. As ações de autoconhecimento, construção de marca profissional, posicionamento nas mídias sociais e direcionamento na busca por oportunidades estão me apoiando muito neste processo de transição e me tornando um profissional mais capacitado e preparado. Obrigado Jorge pelo apoio incondicional. Esta jornada está sendo fantástica.",
+              "Em transição de carreira, senti que precisava de mais orientação. Iniciei meu projeto de growth com a Elevatte, e cada reunião tem sido reveladora. O autoconhecimento, construção de marca profissional, e direcionamento nas mídias sociais estão me capacitando. Obrigado, Elevatte, pelo apoio. Esta jornada tem sido incrível.",
             customerName: "Diego Rodriguez",
-            customerTitle: "Gerente comercial – Rappi"
+            customerProfile: "Gerente comercial – Rappi"
           }
         ]}
       />
@@ -242,6 +242,7 @@ export default () => {
         text={<><HighlightedTextInverse>Eleve</HighlightedTextInverse>  seu valor Profissional agora!</>}
         subheading="Deixe a nossa IA transformar seu currículo. Juntos, podemos destacar suas habilidades e aumentar seu salário em até 40%."
         link1Text="Comece agora"
+        link1Url="https://forms.gle/Tk3Lf5jHX5xxpYZJ7"
       />
       <Footer />
     </AnimationRevealPage>

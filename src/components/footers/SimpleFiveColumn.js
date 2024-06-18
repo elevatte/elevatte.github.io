@@ -3,16 +3,16 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-import LogoImage from "../../images/elevatte-icon.png";
+import LogoImage from "../../images/icon-text.svg";
 import { ReactComponent as LinkedinIcon } from "../../images/linkedin-icon.svg";
 import { ReactComponent as InstagramIcon } from "../../images/instagram.svg";
 import { ReactComponent as WhatsappIcon } from "../../images/whatsapp.svg";
 
 const Container = tw.div`relative bg-gray-200 -mx-8 -mb-8 px-8`;
-const FiveColumns = tw.div`max-w-screen-xl mx-auto pt-16 lg:pt-20 flex flex-wrap justify-between`;
+const FiveColumns = tw.div`max-w-screen-xl mx-auto pt-16 lg:pt-20 flex flex-wrap justify-between `;
 const CopyColumn = tw.div`w-full text-center py-8 bg-gray-200`;
 
-const Column = tw.div`md:w-1/5`;
+const Column = tw.div`md:w-1/5 px-2`;
 const WideColumn = tw(Column)`text-center md:text-left w-full md:w-2/5 mb-10 md:mb-0`;
 
 const ColumnHeading = tw.h5`font-bold`;
@@ -94,22 +94,22 @@ export default () => {
           <ColumnHeading>Features</ColumnHeading>
           <LinkList>
             <LinkListItem>
-              <Link href="#">Outplacement</Link>
+              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Outplacement">Outplacement</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">Headhunter</Link>
+              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Headhunter">Headhunter</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">Mentoria de Carreira</Link>
+              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Mentoria%20de%20Carreira">Mentoria de Carreira</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">Treinamentos e Palestras</Link>
+              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Treinamentos%20e%20Palestras">Treinamentos e Palestras</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">Aperfeiçoamento personalizado</Link>
+              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Aperfeiçoamento%20Personalizado">Aperfeiçoamento personalizado</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">Otimização da apresentação Pessoal</Link>
+              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Otimiza%C3%A7%C3%A3o%20da%20Apresenta%C3%A7%C3%A3o%20Pessoal">Otimização da apresentação Pessoal</Link>
             </LinkListItem>
           </LinkList>
         </Column>
