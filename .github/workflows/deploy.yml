@@ -35,6 +35,10 @@ jobs:
           NODE_ENV=production yarn build
           cd build
           git init
+          git remote add origin https://github.com/elevatte/elevatte.github.io.git
+          git checkout -b gh-pages
+          echo "elevatte.me" > CNAME
           git add -A
           git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
-          git push -f https://github.com/elevatte/elevatte.github.io.git master:gh-pages
+          git push -f https://${{ secrets.BOT_ACCESS_TOKEN }}:x-oauth-basic@github.com/elevatte/elevatte.github.io.git gh-pages
+          
