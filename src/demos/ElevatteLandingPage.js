@@ -44,7 +44,7 @@ export default () => {
           description='Seja destaque nos processos seletivos com nossas ferramentas avançadas para criar currículo e preparação para entrevistas. Crie sua conta e comece agora mesmo!'
           subHeading='Assistente de IA para crescimento profissional'
           imageSrc={heroImage}
-          primaryButtonUrl = "https://forms.gle/Tk3Lf5jHX5xxpYZJ7"
+          primaryButtonUrl = "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849007280c01902c06b5ef09b0"
           primaryButtonText = "Começar"
         />
       </div>
@@ -242,7 +242,7 @@ export default () => {
         text={<><HighlightedTextInverse>Eleve</HighlightedTextInverse>  seu valor Profissional agora!</>}
         subheading="Deixe a nossa IA transformar seu currículo. Juntos, podemos destacar suas habilidades e aumentar seu salário em até 40%."
         link1Text="Comece agora"
-        link1Url="https://forms.gle/Tk3Lf5jHX5xxpYZJ7"
+        link1Url="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849007280c01902c06b5ef09b0"
       />
       <Footer />
     </AnimationRevealPage>
