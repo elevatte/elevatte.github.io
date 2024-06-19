@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -10,10 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2 
-      - uses: actions/setup-node@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: '16.14.0'
+          node-version: '16'
 
       - name: Setup bot
         env:
@@ -29,11 +32,15 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Build the project
+        run: yarn build
+
       - name: Deploy to gh-pages
         run: |
-          yarn build  # Gera o build do projeto
           cd build
-          git init  # Inicializa um repositório Git
-          git add -A  # Adiciona todos os arquivos
-          git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"  # Faz o commit com o GITHUB_RUN_ID
-          git push -f https://${bot_access_token}:x-oauth-basic@github.com/elevatte/elevatte.github.io.git gh-pages  # Faz o push forçado para a branch gh-pages
+          git init
+          git checkout -b gh-pages
+          echo "elevatte.me" > CNAME
+          git add -A
+          git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
+          git push -f https://${bot_access_token}:x-oauth-basic@github.com/elevatte/elevatte.github.io.git gh-pages
