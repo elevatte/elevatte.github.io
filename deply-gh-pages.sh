@@ -18,6 +18,9 @@ git checkout -b gh-pages
 # Adiciona o repositório remoto
 git remote add origin https://github.com/elevatte/elevatte.github.io.git
 
+# Cria o arquivo CNAME com o conteúdo elevatte.me
+echo "elevatte.me" > CNAME
+
 # Adiciona os arquivos e faz o commit
 git add .
 git commit -m "Deploy to gh-pages"
