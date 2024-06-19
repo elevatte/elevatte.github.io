@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Setup bot
+      - name: setup bot
         env:
           bot_username: '${{ secrets.BOT_USERNAME }}'
           bot_email: '${{ secrets.BOT_EMAIL }}'
@@ -29,18 +29,12 @@ jobs:
           git config --global user.email $bot_email
           git config --global user.name $bot_username
 
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build the project
-        run: yarn build
-
-      - name: Deploy to gh-pages
+      - name: deploy to gh-pages
         run: |
+          yarn install
+          NODE_ENV=production yarn build
           cd build
           git init
-          git checkout -b gh-pages
-          echo "elevatte.me" > CNAME
           git add -A
           git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
-          git push -f https://${bot_access_token}:x-oauth-basic@github.com/elevatte/elevatte.github.io.git gh-pages
+          git push -f https://github.com/elevatte/elevatte.github.io.git master:gh-pages
