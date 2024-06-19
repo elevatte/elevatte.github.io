@@ -40,5 +40,5 @@ jobs:
           echo "elevatte.me" > CNAME
           git add -A
           git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
-          git push -f https://${{ secrets.BOT_ACCESS_TOKEN }}:x-oauth-basic@github.com/elevatte/elevatte.github.io.git gh-pages
+          git push -f https://$bot_access_token@github.com/elevatte/elevatte.github.io.git gh-pages
           
