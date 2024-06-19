@@ -85,9 +85,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import EventLandingPage from "demos/EventLandingPage.js";
 // import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
 // import AgencyLandingPage from "demos/AgencyLandingPage.js";
-import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 // import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
-import ServiceLandingPage from "demos/ServiceLandingPage.js";
 import ElevatteLandingPage from "demos/ElevatteLandingPage";
 // import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
 
@@ -100,10 +98,6 @@ import ElevatteLandingPage from "demos/ElevatteLandingPage";
 // import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
-
-import ComponentRenderer from "ComponentRenderer.js";
-import MainLandingPage from "MainLandingPage.js";
-import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -119,7 +113,6 @@ export default function App() {
         <Routes>
           {/* <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} /> */}
           {/* <Route path="/components/:type/:name" element={<ComponentRenderer />} /> */}
-          <Route path="/example" element={<SaaSProductLandingPage />} />
           <Route path="/" element={<ElevatteLandingPage />} />
         </Routes>
       </Router>
