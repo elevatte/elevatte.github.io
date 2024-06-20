@@ -41,11 +41,12 @@ export default () => {
       <div id="home">
         <Hero
           heading='Eleve seu valor e conquiste seu aumento salarial'
-          description='Seja destaque nos processos seletivos com nossas ferramentas avançadas para criar currículo e preparação para entrevistas. Crie sua conta e comece agora mesmo!'
+          description='Seja destaque nos processos seletivos com nossas ferramentas avançadas para criar currículo e preparação para entrevistas. Peça agora mesmo!'
           subHeading='Assistente de IA para crescimento profissional'
           imageSrc={heroImage}
-          primaryButtonUrl = "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849007280c01902c06b5ef09b0"
+          primaryButtonUrl = "https://mpago.la/1qn8JCN"
           primaryButtonText = "Começar"
+          targetBlank={true}
         />
       </div>
       <FeatureStats/>
@@ -242,7 +243,8 @@ export default () => {
         text={<><HighlightedTextInverse>Eleve</HighlightedTextInverse>  seu valor Profissional agora!</>}
         subheading="Deixe a nossa IA transformar seu currículo. Juntos, podemos destacar suas habilidades e aumentar seu salário em até 40%."
         link1Text="Comece agora"
-        link1Url="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849007280c01902c06b5ef09b0"
+        link1Url="https://mpago.la/1qn8JCN"
+        targetBlank={true}
       />
       <Footer />
     </AnimationRevealPage>

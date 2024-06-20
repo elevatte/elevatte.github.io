@@ -38,6 +38,7 @@ export default ({
   link1Url = "#",
   link1IconSrc = appleIconImageSrc,
   pushDownFooter = false,
+  targetBlank = false
 }) => {
   return (
     <Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
@@ -47,7 +48,7 @@ export default ({
             <Text>{text}</Text>
             {subheading && <Subheading>{subheading}</Subheading>}
             <LinksContainer>
-              <Link href={link1Url}>
+              <Link href={link1Url} target={targetBlank ? "_blank" : "_self"}>
                 <img src={link1IconSrc} alt=""/>
                 <span>{link1Text}</span>
               </Link>

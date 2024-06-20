@@ -34,6 +34,7 @@ export default ({
   primaryButtonUrl = "https://google.com",
   primaryButtonText = "Get Started",
   buttonRounded = true,
+  targetBlank = false
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -102,7 +103,7 @@ export default ({
                 <Heading>{heading}</Heading>
                 <SubHeading>{subHeading}</SubHeading>
                 <Description>{description}</Description>
-                <PrimaryButton as="a" href={primaryButtonUrl} css={buttonRoundedCss}>
+                <PrimaryButton as="a" target={targetBlank ? "_blank" : "_self"} href={primaryButtonUrl} css={buttonRoundedCss}>
                   {primaryButtonText}
                 </PrimaryButton>
               </TextColumn>
