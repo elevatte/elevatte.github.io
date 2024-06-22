@@ -101,6 +101,11 @@ import ElevatteLandingPage from "demos/ElevatteLandingPage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ReactGA4 from 'react-ga4';
+import Hotjar from '@hotjar/browser';
+
+const siteId = 5033364;
+const hotjarVersion = 6;
+Hotjar.init(siteId, hotjarVersion);
 
 const GoogleAnalyticsTrack = () => {
   ReactGA4.initialize('G-LCLW13KEKW');
