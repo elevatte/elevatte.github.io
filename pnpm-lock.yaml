@@ -11,6 +11,9 @@ importers:
       '@fontsource/ubuntu':
         specifier: ^5.0.13
         version: 5.0.13
+      '@hotjar/browser':
+        specifier: ^1.0.9
+        version: 1.0.9
       '@testing-library/jest-dom':
         specifier: ^5.16.0
         version: 5.17.0
@@ -942,6 +945,9 @@ packages:
 
   '@fontsource/ubuntu@5.0.13':
     resolution: {integrity: sha512-uCnfknLk6ERUUgGPHqvtLGkHkW/0oyxEJy6CZLaHbh6d1om1jvqcnc5nSPel1UCX5frLxRSTkRKU/vAbL9QtJw==}
+
+  '@hotjar/browser@1.0.9':
+    resolution: {integrity: sha512-n9akDMod8BLGpYEQCrHwlYWWd63c1HlhUSXNIDfClZtKYXbUjIUOFlNZNNcUxgHTCsi4l2i+SWKsGsO0t93S8w==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -6831,6 +6837,8 @@ snapshots:
   '@eslint/js@8.57.0': {}
 
   '@fontsource/ubuntu@5.0.13': {}
+
+  '@hotjar/browser@1.0.9': {}
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:

@@ -36,6 +36,7 @@ const BackgroundWaveContainer = tw.div`bg-no-repeat bg-left-bottom pb-8`;
 const HighlightedTextInverse = tw.span`bg-gray-100 text-blue-700 px-4 transform inline-block`;
 
 export default () => {
+  const cta = "https://forms.gle/Tk3Lf5jHX5xxpYZJ7"
   return (
     <AnimationRevealPage disabled>
       <div id="home">
@@ -44,7 +45,7 @@ export default () => {
           description='Seja destaque nos processos seletivos com nossas ferramentas avançadas para criar currículo e preparação para entrevistas. Peça agora mesmo!'
           subHeading='Assistente de IA para crescimento profissional'
           imageSrc={heroImage}
-          primaryButtonUrl = "https://mpago.la/1qn8JCN"
+          primaryButtonUrl = {cta}
           primaryButtonText = "Começar"
           targetBlank={true}
         />
@@ -243,7 +244,7 @@ export default () => {
         text={<><HighlightedTextInverse>Eleve</HighlightedTextInverse>  seu valor Profissional agora!</>}
         subheading="Deixe a nossa IA transformar seu currículo. Juntos, podemos destacar suas habilidades e aumentar seu salário em até 40%."
         link1Text="Comece agora"
-        link1Url="https://mpago.la/1qn8JCN"
+        link1Url={cta}
         targetBlank={true}
       />
       <Footer />
