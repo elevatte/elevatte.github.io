@@ -100,14 +100,21 @@ import ElevatteLandingPage from "demos/ElevatteLandingPage";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ReactGA4 from 'react-ga4';
+
+const GoogleAnalyticsTrack = () => {
+  ReactGA4.initialize('G-LCLW13KEKW');
+  ReactGA4.send({ hitType: "pageview", page: window.location.pathname + window.location.search, title: document.title });
+}
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
 
-
   return (
     <>
+      {/* to fix */}
+      {window.location.hostname === 'elevatte.me' && <GoogleAnalyticsTrack />}
       <GlobalStyles />
       <Router>
         <Routes>
