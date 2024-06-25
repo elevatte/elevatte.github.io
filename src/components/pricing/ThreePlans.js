@@ -7,15 +7,16 @@ import { SectionDescription } from "components/misc/Typography.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as SvgDecoratorBlob } from "images/svg-decorator-blob-6.svg";
+import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-circle.svg";
 
 const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full`;
 const Description = tw(SectionDescription)`w-full text-center`;
-
+const FeatureIcon = tw(CheckboxIcon)`w-5 h-5 text-blue-700 mr-1`;
 const PlansContainer = tw.div`flex justify-between flex-col lg:flex-row items-center lg:items-stretch relative`;
 const Plan = styled.div`
-  ${tw`w-full max-w-sm mt-16 lg:mr-8 lg:last:mr-0 text-center px-8 rounded-lg shadow relative pt-2 text-gray-900 bg-white flex flex-col`}
+  ${tw`w-full max-w-sm mt-16 lg:mr-8 lg:last:mr-0 px-8 rounded-lg shadow relative pt-2 text-gray-900 bg-white flex flex-col`}
   .planHighlight {
     ${tw`rounded-t-lg absolute top-0 inset-x-0 h-2`}
   }
@@ -25,10 +26,10 @@ const Plan = styled.div`
     css`
       background: rgb(100,21,255);
       background: linear-gradient(135deg, rgba(100,21,255,1) 0%, rgba(128,64,252,1) 100%);
-background: rgb(85,60,154);
-background: linear-gradient(135deg, rgba(85,60,154,1) 0%, rgba(128,90,213,1) 100%);
-background: rgb(76,81,191);
-background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 100%);
+      background: rgb(85,60,154);
+      background: linear-gradient(135deg, rgba(85,60,154,1) 0%, rgba(128,90,213,1) 100%);
+      background: rgb(76,81,191);
+      background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 100%);
       ${tw`bg-primary-500 text-gray-100`}
       .planHighlight {
         ${tw`hidden`}
@@ -46,9 +47,8 @@ background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 10
         ${tw`bg-gray-100 text-primary-500 hocus:bg-gray-300 hocus:text-primary-800`}
     `}
 `;
-
 const PlanHeader = styled.div`
-  ${tw`flex flex-col uppercase leading-relaxed py-8`}
+  ${tw`flex flex-col uppercase leading-relaxed py-8 text-center`}
   .name {
     ${tw`font-bold text-xl`}
   }
@@ -62,7 +62,7 @@ const PlanHeader = styled.div`
 const PlanFeatures = styled.div`
   ${tw`flex flex-col -mx-8 px-8 py-8 border-t-2 border-b-2 flex-1`}
   .feature {
-    ${tw`mt-5 first:mt-0 font-medium`}
+    ${tw`mt-5 first:mt-0 font-medium flex items-center`}
     &:not(.mainFeature) {
       ${tw`text-gray-600`}
     }
@@ -87,7 +87,6 @@ export default ({
   heading = "Flexible Plans.",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   plans = null,
-  primaryButtonText = "Buy Now"
 }) => {
   const defaultPlans = [
     {
@@ -96,6 +95,7 @@ export default ({
       duration: "Monthly",
       mainFeature: "Suited for Personal Blogs",
       features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"],
+      ctaText: "Buy Now"
     },
     {
       name: "Business",
@@ -104,6 +104,7 @@ export default ({
       mainFeature: "Suited for Production Websites",
       features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance"],
       featured: true,
+      ctaText: "Buy Now"
     },
     {
       name: "Enterprise",
@@ -111,6 +112,7 @@ export default ({
       duration: "Monthly",
       mainFeature: "Suited for Big Companies",
       features: ["90 Templates", "9 Landing Pages", "37 Internal Pages", "Personal Assistance"],
+      ctaText: "Buy Now"
     },
   ];
 
@@ -118,16 +120,13 @@ export default ({
 
   const highlightGradientsCss = [
     css`
-      background: rgb(56, 178, 172);
-      background: linear-gradient(115deg, rgba(56, 178, 172, 1) 0%, rgba(129, 230, 217, 1) 100%);
+      background: linear-gradient(90deg, #0288D1 0%, #039BE5 100%);
     `,
     css`
-      background: rgb(56, 178, 172);
-      background-image: linear-gradient(115deg, #6415ff, #7431ff, #8244ff, #8e56ff, #9a66ff);
+      background: linear-gradient(90deg, #0141CF 0%, #4881FF 100%);
     `,
     css`
-      background: rgb(245, 101, 101);
-      background: linear-gradient(115deg, rgba(245, 101, 101, 1) 0%, rgba(254, 178, 178, 1) 100%);
+      background: linear-gradient(90deg, #3F0066 0%, #1D3D83 0%, #53088D 100%);
     `
   ];
 
@@ -152,12 +151,12 @@ export default ({
                 <span className="feature mainFeature">{plan.mainFeature}</span>
                 {plan.features.map((feature, index) => (
                   <span key={index} className="feature">
-                    {feature}
+                    <FeatureIcon /> {feature}
                   </span>
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton css={!plan.featured && highlightGradientsCss[index]}>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton css={!plan.featured && highlightGradientsCss[index]}>{plan.ctaText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}

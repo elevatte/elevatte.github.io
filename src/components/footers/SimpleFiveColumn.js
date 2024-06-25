@@ -79,13 +79,13 @@ export default () => {
             Assistente de IA para crescimento profissional. Eleve seu valor e conquiste seu aumento salarial.
           </CompanyDescription>
           <SocialLinksContainer>
-            <SocialLink href="https://www.linkedin.com/company/elevatte">
+            <SocialLink href="https://www.linkedin.com/company/elevatte" target="_blank">
               <LinkedinIcon />
             </SocialLink>
-            <SocialLink href="https://www.instagram.com/elevatte.me/">
+            <SocialLink href="https://www.instagram.com/elevatte.me/" target="_blank">
               <InstagramIcon />
             </SocialLink>
-            <SocialLink href="https://web.whatsapp.com/send?phone=5548988570948&text=Ol%C3%A1%2C%20eu%20quero%20assumir%20o%20controle%20da%20minha%20carreira.">
+            <SocialLink href="https://wa.me/5548988570948?text=Quero%20conhecer%20mais%20sobre%20a%20Elevatte" target="_blank">
               <WhatsappIcon />
             </SocialLink>
           </SocialLinksContainer>
@@ -94,22 +94,22 @@ export default () => {
           <ColumnHeading>Features</ColumnHeading>
           <LinkList>
             <LinkListItem>
-              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Outplacement">Outplacement</Link>
+              <Link target="_blank" href="https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Outplacement">Outplacement</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Headhunter">Headhunter</Link>
+              <Link target="_blank" href="https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Headhunter">Headhunter</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Mentoria%20de%20Carreira">Mentoria de Carreira</Link>
+              <Link target="_blank" href="https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Mentoria%20de%20Carreira">Mentoria de Carreira</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Treinamentos%20e%20Palestras">Treinamentos e Palestras</Link>
+              <Link target="_blank" href="https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Treinamentos%20e%20Palestras">Treinamentos e Palestras</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Aperfeiçoamento%20Personalizado">Aperfeiçoamento personalizado</Link>
+              <Link target="_blank" href="https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Aperfeiçoamento%20Personalizado">Aperfeiçoamento personalizado</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Otimiza%C3%A7%C3%A3o%20da%20Apresenta%C3%A7%C3%A3o%20Pessoal">Otimização da apresentação Pessoal</Link>
+              <Link target="_blank" href="https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Otimiza%C3%A7%C3%A3o%20da%20Apresenta%C3%A7%C3%A3o%20Pessoal">Otimização da apresentação Pessoal</Link>
             </LinkListItem>
           </LinkList>
         </Column>
@@ -118,6 +118,9 @@ export default () => {
           <LinkList>
             <LinkListItem>
               <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}>Home</Link>
+            </LinkListItem>
+            <LinkListItem>
+              <Link href="#pricing" onClick={(e) => { e.preventDefault(); handleNavClick('pricing'); }}>Planos</Link>
             </LinkListItem>
             <LinkListItem>
               <Link href="#blog" onClick={(e) => { e.preventDefault(); handleNavClick('blog'); }}>Blog</Link>

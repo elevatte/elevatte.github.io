@@ -85,6 +85,7 @@ export default ({
     <NavLinks key={1}>
       <NavLink href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}>Home</NavLink>
       <NavLink href="#features" onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}>Features</NavLink>
+      <NavLink href="#pricing" onClick={(e) => { e.preventDefault(); handleNavClick('pricing'); }}>Planos</NavLink>
       <NavLink href="#blog" onClick={(e) => { e.preventDefault(); handleNavClick('blog'); }}>Blog</NavLink>
     </NavLinks>
   ];

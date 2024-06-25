@@ -9,28 +9,34 @@ import FeatureStats from "components/features/ThreeColCenteredStatsPrimaryBackgr
 import Blog from "components/blogs/GridWithFeaturedPost.js";
 import Testimonial from "components/testimonials/SimplePrimaryBackground.js";
 import FAQ from "components/faqs/SingleCol.js";
+import Pricing from "components/pricing/ThreePlans.js";
 import DownloadApp from "components/cta/DownloadApp.js";
 import Footer from "components/footers/SimpleFiveColumn.js";
+import FourColumnContainer from "components/sponsors/FourColumnContainer";
+
 import imageFirstFeature from "../images/feature-1.png";
 import imageSecondFeature from "../images/feature-2.png";
 import imageThirdFeature from "../images/feature-3.png";
 import heroImage from '../images/pessoa-com-notebook.svg';
 import bgRight from "../images/bg-right.png";
 import bgWave from "../images/bg-wave.svg";
-
 import outplacementImage from "images/trust.png";
 import headHunterImage from "images/key-person.png";
 import mentoriaDeCarreiraImage from "images/growth.png";
 import treinamentosEPalestrasImage from "images/coaching.png";
 import aperfeicoamentoImage from "images/learning.png";
 import apresentacaoPessoalImage from "images/role-model.png";
-
 import testimonial1 from "images/testimonial-1.png"
 import testimonial2 from "images/testimonial-2.png"
 import testimonial3 from "images/testimonial-3.png"
 import testimonial4 from "images/testimonial-4.png"
+import acateImg from "images/acate.png"
+import sebraeImg from "images/sebrae-sc.png"
+import educacao49 from "images/49-educacao.png"
+import jornadaStartup from "images/jornada-startups.png"
 
 const HighlightedText = tw.span`text-blue-700`
+const HighlightedTextPricing = tw.span`text-gray-800 font-extrabold`
 const BackgroundRightContainer = tw.div`bg-no-repeat bg-right pb-8`;
 const BackgroundWaveContainer = tw.div`bg-no-repeat bg-left-bottom pb-8`;
 const HighlightedTextInverse = tw.span`bg-gray-100 text-blue-700 px-4 transform inline-block`;
@@ -91,37 +97,37 @@ export default () => {
               imageSrc: outplacementImage,
               title: "Outplacement",
               description: "Facilitamos a transição de carreira com análise de perfil, currículos impactantes, preparo para entrevistas e acesso a uma rede de contatos. Recolocação rápida e personalizada.",
-              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Outplacement"
+              url: "https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Outplacement"
             },
             {
               imageSrc: headHunterImage,
               title: "Headhunter",
               description: "Recrutamos talentos de alto nível para posições-chave, com total discrição. Apresentamos profissionais qualificados que impulsionam o crescimento da sua organização.",
-              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Headhunter"
+              url: "https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Headhunter"
             },
             {
               imageSrc: mentoriaDeCarreiraImage,
               title: "Mentoria de Carreira",
               description: "Desenvolva sua carreira com diagnóstico, plano estratégico e mentoria contínua. Avance e alcance seus objetivos com nosso suporte.",
-              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Mentoria%20de%20Carreira"
+              url: "https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Mentoria%20de%20Carreira"
             },
             {
               imageSrc: treinamentosEPalestrasImage,
               title: "Treinamentos e Palestras",
               description: "Capacitamos sua equipe em gestão, desenvolvimento e inovação. Workshops práticos para enfrentar desafios e alcançar resultados excepcionais.",
-              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Treinamentos%20e%20Palestras"
+              url: "https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Treinamentos%20e%20Palestras"
             },
             {
               imageSrc: aperfeicoamentoImage,
               title: "Aperfeiçoamento Personalizado",
               description: "Receba feedback detalhado e recomendações baseadas nas tendências de mercado para aprimorar suas habilidades e se destacar profissionalmente.",
-              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Aperfeiçoamento%20Personalizado"
+              url: "https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Aperfeiçoamento%20Personalizado"
             },
             {
               imageSrc: apresentacaoPessoalImage,
               title: "Otimização da Apresentação Pessoal",
               description: "Aprimore sua apresentação pessoal com orientações claras e práticas, destacando suas competências e conquistas de forma impactante.",
-              url: "https://web.whatsapp.com/send?phone=5548988570948&text=Quero%20saber%20mais%20sobre%20Otimiza%C3%A7%C3%A3o%20da%20Apresenta%C3%A7%C3%A3o%20Pessoal"
+              url: "https://wa.me/5548988570948?text=Quero%20saber%20mais%20sobre%20Otimiza%C3%A7%C3%A3o%20da%20Apresenta%C3%A7%C3%A3o%20Pessoal"
             }
           ]}
           imageContainerCss={tw`p-2!`}
@@ -162,6 +168,93 @@ export default () => {
           }
         ]}
       />
+      <div id="sponsors">
+        <FourColumnContainer
+          heading={<>Apoiado por <HighlightedText>Líderes </HighlightedText> do Setor</>}
+          description="Estas são as marcas e organizações que nos apoiam, garantindo nosso compromisso com a excelência e a inovação em tudo o que fazemos."
+          cards={[
+            {
+              imageSrc: acateImg,
+              alt: "ACATE",
+              url: "https://www.acate.com.br/"
+            },
+            {
+              imageSrc: sebraeImg,
+              alt: "SEBRAE SC",
+              url: "https://www.sebrae-sc.com.br/"
+            },
+            {
+              imageSrc: educacao49,
+              alt: "49 Educação",
+              url: "https://49educacao.com.br/"
+            },
+            {
+              imageSrc: jornadaStartup,
+              alt: "Jornada Startups",
+              url: "https://www.jornadastartups.com.br/"
+            }
+          ]}
+          imageContainerCss={tw`p-2!`}
+          imageCss={tw`w-40! h-32!`}
+        />
+      </div>
+      <div id="pricing">
+        <Pricing
+          subheading=''
+          description='Planos personalizados para atender suas necessidades, seja você um profissional em início de carreira ou uma empresa buscando otimizar seus processos de recrutamento.'
+          heading={
+            <>
+              Encontre o Plano <HighlightedText>Perfeito</HighlightedText> para <HighlightedText>você</HighlightedText>
+            </>
+          }
+          plans={[
+            {
+              name: "Pessoal",
+              price: "R$ 17,99",
+              duration: "Mensal",
+              mainFeature: "Desenvolvimento Pessoal",
+              features: [
+                "Crie seu primeiro currículo",
+                "Acesso a templates gratuitos",
+                "Download PDF",
+                "Análises inteligente gratuitas",
+                "Tradução para outros idiomas"
+              ],
+              ctaText: "Começar"
+            },
+            {
+              name: "Profissional",
+              price: "R$ 37,99",
+              duration: "Mensal",
+              mainFeature: "Gestão Avançada",
+              features: [
+                <HighlightedTextPricing>Tudo do plano Pessoal +</HighlightedTextPricing>,
+                "Gerencie até 100 CVs",
+                "Análise inteligente ilimitada",
+                "Download em PDF, DOC, TXT",
+                "Traduções ilimitadas",
+                "Galeria de templates ilimitados",
+                "Plano de ação para CV e Linkedin",
+                "Índices de empregabilidade"
+              ],
+              ctaText: "Começar"
+            },
+            {
+              name: "Empresarial",
+              price: "R$ 57,99",
+              duration: "Mensal",
+              mainFeature: "Soluções Corporativas",
+              features: [
+                <HighlightedTextPricing>Tudo do plano Profissional +</HighlightedTextPricing>,
+                "Customização para o seu negócio",
+                "Funcionalidades exclusivas",
+                "Suporte dedicado"
+              ],
+              ctaText: "Começar"
+            }
+          ]}
+        />
+      </div>
       <div id="faq">
         <FAQ
           subheading=''

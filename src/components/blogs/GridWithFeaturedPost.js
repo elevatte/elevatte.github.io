@@ -118,7 +118,7 @@ export default ({
         <Posts>
           {posts.map((post, index) => (
             <PostContainer featured={post.featured} key={index}>
-              <Post className="group" href={post.url}>
+              <Post className="group" href={post.url} target="_blank">
                 <PostImage imageSrc={post.postImageSrc} />
                 <PostText>
                   <PostTitle>{post.title}</PostTitle>
