@@ -119,8 +119,13 @@ export default () => {
             <LinkListItem>
               <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}>Home</Link>
             </LinkListItem>
+            {false &&
+              <LinkListItem>
+                <Link href="#pricing" onClick={(e) => { e.preventDefault(); handleNavClick('pricing'); }}>Planos</Link>
+              </LinkListItem>
+            }
             <LinkListItem>
-              <Link href="#pricing" onClick={(e) => { e.preventDefault(); handleNavClick('pricing'); }}>Planos</Link>
+              <Link href="#sponsors" onClick={(e) => { e.preventDefault(); handleNavClick('sponsors'); }}>Apoiadores</Link>
             </LinkListItem>
             <LinkListItem>
               <Link href="#blog" onClick={(e) => { e.preventDefault(); handleNavClick('blog'); }}>Blog</Link>

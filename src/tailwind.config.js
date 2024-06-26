@@ -768,6 +768,9 @@ module.exports = {
         '.bg-primary-gradient': {
           'background-image': 'linear-gradient(90deg, #0141CF 0%, #4881FF 100%)'
         },
+        '.bg-white-gradient': {
+          'background-image': 'linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)'
+        },
         '.bg-purple-gradient': {
           'background-image': 'linear-gradient(90deg, #3F0066 0%, #1D3D83 50%, #53088D 100%);'
         }

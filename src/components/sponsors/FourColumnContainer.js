@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+import { Container } from "components/misc/Layouts.js";
 import Icon1 from "images/celebration-icon.svg";
 import Icon2 from "images/celebration-icon.svg";
 import Icon3 from "images/celebration-icon.svg";
@@ -18,7 +18,6 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-64 w-64 opacity-15 transform -translate-x-2/3 text-primary-500`}
 `;
-
 const Content = tw.div`max-w-screen-xl mx-auto py-16`;
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
@@ -29,7 +28,6 @@ const FourColumnContainer = styled.div`
 const Column = styled.div`
   ${tw`lg:w-1/4 max-w-xs`}
 `;
-
 const Card = styled.a`
   ${tw`flex flex-col items-center text-center h-full mx-4 px-4 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
   .imageContainer {

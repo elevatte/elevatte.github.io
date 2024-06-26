@@ -170,7 +170,7 @@ export default () => {
       />
       <div id="sponsors">
         <FourColumnContainer
-          heading={<>Apoiado por <HighlightedText>Líderes </HighlightedText> do Setor</>}
+          heading={<>Apoiado por <HighlightedText>Líderes </HighlightedText></>}
           description="Estas são as marcas e organizações que nos apoiam, garantindo nosso compromisso com a excelência e a inovação em tudo o que fazemos."
           cards={[
             {
@@ -198,7 +198,7 @@ export default () => {
           imageCss={tw`w-40! h-32!`}
         />
       </div>
-      <div id="pricing">
+      {false && <div id="pricing">
         <Pricing
           subheading=''
           description='Planos personalizados para atender suas necessidades, seja você um profissional em início de carreira ou uma empresa buscando otimizar seus processos de recrutamento.'
@@ -209,10 +209,10 @@ export default () => {
           }
           plans={[
             {
-              name: "Pessoal",
-              price: "R$ 17,99",
+              name: "Individual",
+              price: "R$ 89,90",
               duration: "Mensal",
-              mainFeature: "Desenvolvimento Pessoal",
+              mainFeature: "Todos os benefícios do Plano gratuito, mais:",
               features: [
                 "Crie seu primeiro currículo",
                 "Acesso a templates gratuitos",
@@ -220,41 +220,47 @@ export default () => {
                 "Análises inteligente gratuitas",
                 "Tradução para outros idiomas"
               ],
-              ctaText: "Começar"
+              ctaText: "Começar",
+              featured: true
             },
             {
-              name: "Profissional",
-              price: "R$ 37,99",
-              duration: "Mensal",
-              mainFeature: "Gestão Avançada",
+              name: "Empresarial",
+              price: "",
+              contactText: "Entre em contato com a equipe de vendas para obter estimativas de preço",
+              duration: "",
+              mainFeature: "Tudo que o plano Individual oferece, mais:",
               features: [
-                <HighlightedTextPricing>Tudo do plano Pessoal +</HighlightedTextPricing>,
                 "Gerencie até 100 CVs",
                 "Análise inteligente ilimitada",
                 "Download em PDF, DOC, TXT",
                 "Traduções ilimitadas",
                 "Galeria de templates ilimitados",
                 "Plano de ação para CV e Linkedin",
-                "Índices de empregabilidade"
+                "Índices de empregabilidade",
+                "Criação de workspaces",
+                "Usuários ilimitados"
               ],
-              ctaText: "Começar"
+              ctaText: "Falar com especialista"
             },
             {
-              name: "Empresarial",
-              price: "R$ 57,99",
-              duration: "Mensal",
-              mainFeature: "Soluções Corporativas",
+              name: "Corporativo",
+              price: "",
+              contactText: "Entre em contato com a equipe de vendas para obter estimativas de preço",
+              duration: "",
+              mainFeature: "Tudo de bom que o plano Empresarial oferece, mais:",
               features: [
-                <HighlightedTextPricing>Tudo do plano Profissional +</HighlightedTextPricing>,
                 "Customização para o seu negócio",
                 "Funcionalidades exclusivas",
-                "Suporte dedicado"
+                "Suporte dedicado",
+                "Gerenciamento de equipes",
+                "Relatórios avançados",
+                "Integração com plataformas"
               ],
-              ctaText: "Começar"
+              ctaText: "Falar com especialista"
             }
           ]}
         />
-      </div>
+      </div>}
       <div id="faq">
         <FAQ
           subheading=''

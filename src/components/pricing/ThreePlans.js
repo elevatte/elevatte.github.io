@@ -13,7 +13,7 @@ const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full`;
 const Description = tw(SectionDescription)`w-full text-center`;
-const FeatureIcon = tw(CheckboxIcon)`w-5 h-5 text-blue-700 mr-1`;
+const FeatureIcon = tw(CheckboxIcon)`w-5 h-5 mr-1 text-blue-700`;
 const PlansContainer = tw.div`flex justify-between flex-col lg:flex-row items-center lg:items-stretch relative`;
 const Plan = styled.div`
   ${tw`w-full max-w-sm mt-16 lg:mr-8 lg:last:mr-0 px-8 rounded-lg shadow relative pt-2 text-gray-900 bg-white flex flex-col`}
@@ -24,12 +24,7 @@ const Plan = styled.div`
   ${props =>
     props.featured &&
     css`
-      background: rgb(100,21,255);
-      background: linear-gradient(135deg, rgba(100,21,255,1) 0%, rgba(128,64,252,1) 100%);
-      background: rgb(85,60,154);
-      background: linear-gradient(135deg, rgba(85,60,154,1) 0%, rgba(128,90,213,1) 100%);
-      background: rgb(76,81,191);
-      background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 100%);
+      background: linear-gradient(90deg, #0141CF 0%, #4881FF 100%);
       ${tw`bg-primary-500 text-gray-100`}
       .planHighlight {
         ${tw`hidden`}
@@ -44,19 +39,26 @@ const Plan = styled.div`
         ${tw`text-gray-300!`}
       }
       ${BuyNowButton} {
-        ${tw`bg-gray-100 text-primary-500 hocus:bg-gray-300 hocus:text-primary-800`}
+        ${tw`bg-white-gradient text-blue-900 hocus:bg-gray-300 hocus:text-blue-700`}
+      }
+      ${FeatureIcon} {
+        ${tw`text-white`}
+      }
     `}
 `;
 const PlanHeader = styled.div`
-  ${tw`flex flex-col uppercase leading-relaxed py-8 text-center`}
+  ${tw`flex flex-col uppercase leading-relaxed py-8`}
   .name {
-    ${tw`font-bold text-xl`}
+    ${tw`font-bold text-xl text-center`}
   }
   .price {
-    ${tw`font-bold text-4xl sm:text-5xl my-1`}
+    ${tw`font-bold text-4xl sm:text-5xl my-1 text-center`}
+  }
+  .contactText {
+    ${tw`text-gray-600 font-bold text-lg sm:text-lg my-1`}
   }
   .duration {
-    ${tw`text-gray-500 font-bold tracking-widest`}
+    ${tw`text-gray-500 font-bold tracking-widest text-center`}
   }
 `;
 const PlanFeatures = styled.div`
@@ -80,7 +82,6 @@ const BuyNowButton = styled(PrimaryButtonBase)`
 const DecoratorBlob = styled(SvgDecoratorBlob)`
   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-64 w-64 opacity-25 transform -translate-x-1/2 translate-y-1/2`}
 `;
-
 
 export default ({
   subheading = "Pricing",
@@ -120,10 +121,10 @@ export default ({
 
   const highlightGradientsCss = [
     css`
-      background: linear-gradient(90deg, #0288D1 0%, #039BE5 100%);
+      background: linear-gradient(90deg, #0141CF 0%, #4881FF 100%);
     `,
     css`
-      background: linear-gradient(90deg, #0141CF 0%, #4881FF 100%);
+      background: linear-gradient(90deg, #0288D1 0%, #039BE5 100%);
     `,
     css`
       background: linear-gradient(90deg, #3F0066 0%, #1D3D83 0%, #53088D 100%);
@@ -144,14 +145,15 @@ export default ({
               {!plan.featured && <div className="planHighlight" css={highlightGradientsCss[index % highlightGradientsCss.length]} />}
               <PlanHeader>
                 <span className="name">{plan.name}</span>
-                <span className="price">{plan.price}</span>
+                {plan.price && <span className="price">{plan.price}</span>}
+                {plan.contactText && <span className="contactText">{plan.contactText}</span>}
                 <span className="duration">{plan.duration}</span>
               </PlanHeader>
               <PlanFeatures>
                 <span className="feature mainFeature">{plan.mainFeature}</span>
                 {plan.features.map((feature, index) => (
                   <span key={index} className="feature">
-                    <FeatureIcon /> {feature}
+                    <FeatureIcon className={plan.featured ? "text-white" : "text-blue-700"} /> {feature}
                   </span>
                 ))}
               </PlanFeatures>
