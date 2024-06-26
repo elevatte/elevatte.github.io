@@ -36,7 +36,7 @@ import educacao49 from "images/49-educacao.png"
 import jornadaStartup from "images/jornada-startups.png"
 
 const HighlightedText = tw.span`text-blue-700`
-const HighlightedTextPricing = tw.span`text-gray-800 font-extrabold`
+// const HighlightedTextPricing = tw.span`text-gray-800 font-extrabold`
 const BackgroundRightContainer = tw.div`bg-no-repeat bg-right pb-8`;
 const BackgroundWaveContainer = tw.div`bg-no-repeat bg-left-bottom pb-8`;
 const HighlightedTextInverse = tw.span`bg-gray-100 text-blue-700 px-4 transform inline-block`;
